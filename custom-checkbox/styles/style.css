@@ -1,0 +1,35 @@
+.checkbox-container {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  border: 2px solid #000;
+}
+
+.checkbox-container input:checked + .checkmark {
+  background-color: #000;
+  background-image: url("../assets/checkmark.svg");
+}
+
+.checkbox-container input:focus + .checkmark {
+  box-shadow: 0 0 0 3px blue;
+}
